@@ -22,27 +22,27 @@ model_columns = [c for c in feature_columns if c.startswith("model_cleaned_")]
 # BRAND POPULARITY (FROM DATASET)
 # =================================================
 brand_popularity_map = {
-    "Kia": 0.04005,
-    "Mazda": 0.04004,
-    "Subaru": 0.04023,
-    "Tesla": 0.04018,
-    "Nissan": 0.04012,
-    "Porsche": 0.04010,
-    "Ram": 0.04009,
     "Acura": 0.04008,
-    "Land Rover": 0.04007,
-    "Chrysler": 0.04006,
-    "Volkswagen": 0.04005,
-    "Dodge": 0.04004,
     "Audi": 0.03990,
+    "Cadillac": 0.03985,
+    "Chevrolet": 0.03998,
+    "Chrysler": 0.04006,
+    "Dodge": 0.04004,
+    "Ford": 0.03984,
     "Honda": 0.04001,
     "Jeep": 0.04000,
-    "Chevrolet": 0.03998,
+    "Kia": 0.04005,
+    "Land Rover": 0.04007,
     "Lexus": 0.03992,
-    "Cadillac": 0.03985,
-    "Volvo": 0.03984,
-    "Ford": 0.03984,
-    "Other": 0.03950
+    "Mazda": 0.04004,
+    "Nissan": 0.04012,
+    "Other": 0.03950,
+    "Porsche": 0.04010,
+    "Ram": 0.04009,
+    "Subaru": 0.04023,
+    "Tesla": 0.04018,
+    "Volkswagen": 0.04005,
+    "Volvo": 0.03984
 }
 
 # =================================================
@@ -64,8 +64,26 @@ page = st.sidebar.radio("Choose an option:", ("Car Price Prediction", "Dashboard
 makes = list(brand_popularity_map.keys())
 
 models_by_make = {
-    "Honda": ["Accord", "CR-V", "Civic", "Pilot", "Odyssey"],
-    "Volkswagen": ["Jetta", "Atlas", "Passat", "Tiguan"],
+    "Acura": ["Integra", "MDX", "RDX", "TLX"],
+    "Audi": ["A4", "Q5", "Q7", "R8"],
+    "Cadillac": ["CT5", "Escalade", "Lyriq", "XT5"],
+    "Chevrolet": ["Camaro", "Equinox", "Malibu", "Tahoe"],
+    "Chrysler": ["300", "Pacifica"],
+    "Dodge": ["Challenger", "Charger", "Durango"],
+    "Ford": ["Explorer", "F-150", "Focus", "Mustang"],
+    "Honda": ["Accord", "Civic", "CR-V", "Odyssey", "Pilot"],
+    "Jeep": ["Cherokee", "Compass", "Grand Cherokee", "Wrangler"],
+    "Kia": ["Forte", "Sorento", "Sportage", "Telluride"],
+    "Land Rover": ["Defender", "Discovery", "Range Rover"],
+    "Lexus": ["ES", "GX", "NX", "RX"],
+    "Mazda": ["CX-5", "CX-9", "Mazda3", "Mazda6"],
+    "Nissan": ["Altima", "Rogue", "Sentra", "Titan"],
+    "Porsche": ["911", "Cayenne", "Macan", "Panamera"],
+    "Ram": ["1500", "2500", "3500"],
+    "Subaru": ["Crosstrek", "Forester", "Impreza", "Outback"],
+    "Tesla": ["Model 3", "Model S", "Model X", "Model Y"],
+    "Volkswagen": ["Atlas", "Golf", "Passat", "Tiguan"],
+    "Volvo": ["S60", "V60", "XC60", "XC90"],
     "Other": ["Other_Model"]
 }
 
@@ -155,3 +173,4 @@ elif page == "Dashboard":
         "🔗 Open Tableau Dashboard",
         "https://public.tableau.com/views/Book1_17700872354460/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
     )
+

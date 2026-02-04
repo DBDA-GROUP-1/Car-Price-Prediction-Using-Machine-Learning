@@ -145,16 +145,24 @@ if page == "Car Price Prediction":
         st.success(f"Estimated Car Price: ${prediction:,.2f}")
         st.caption("Prediction pipeline exactly matches training pipeline.")
 
-# =================================================
-# PAGE 2: DASHBOARD
-# =================================================
+import streamlit as st
+import streamlit.components.v1 as components
+
+# 1. Define your page variable first (Example using sidebar)
+page = st.sidebar.radio("Navigate", ["Home", "Dashboard"])
+
+# 2. START with 'if'
+if page == "Home":
+    st.title("Home Page")
+    st.write("Welcome to the Home Page.")
+
+# 3. THEN use 'elif' (This was missing or disconnected)
 elif page == "Dashboard":
     st.subheader("📊 Analytics Dashboard")
     st.write("Redirecting to Tableau...")
 
     tableau_url = "https://public.tableau.com/views/Book1_17700872354460/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
 
-    # Inject JavaScript to redirect immediately
     components.html(
         f"""
             <script>

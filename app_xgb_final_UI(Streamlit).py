@@ -150,4 +150,8 @@ if page == "Car Price Prediction":
 # =================================================
 elif page == "Dashboard":
     st.subheader("📊 Analytics Dashboard")
-    webbrowser.open_new_tab("https://public.tableau.com/views/Book1_17700872354460/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link")
+
+    st.link_button(
+        "🔗 Open Tableau Dashboard",
+        "https://public.tableau.com/views/Book1_17700872354460/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
+    )

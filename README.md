@@ -1,10 +1,10 @@
 # Car Price Prediction Using ML
 
-## Overview-
+## Overview
 
 This project analyzes used car data to understand the key factors affecting car prices and builds a machine learning model to predict car prices. The focus was on data cleaning, exploratory data analysis (EDA), and deriving meaningful insights from the dataset.
 
-## Tools Used-
+## Tools Used
 
 * Python
 * Pandas
@@ -13,7 +13,7 @@ This project analyzes used car data to understand the key factors affecting car 
 * Scikit-learn
 * Jupyter Notebook
 
-## Project Steps-
+## Project Steps
 
 **1. Data Cleaning**
 
@@ -32,12 +32,12 @@ This project analyzes used car data to understand the key factors affecting car 
 * Applied Linear Regression model
 * Evaluated performance using R² Score and MAE
 
-## Key Insights-
+## Key Insights
 
 * Car age and mileage negatively impact price
 * Brand significantly influences resale value
 * Diesel vehicles tend to retain better value
 
-## Conclusion-
+## Conclusion
 
 The project demonstrates how data analysis and regression modeling can be used to understand market trends and predict car prices effectively.
